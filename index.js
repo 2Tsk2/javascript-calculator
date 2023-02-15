@@ -1,5 +1,4 @@
-const y = 10;
-const x = 11;
-const myVariable = "hello world";
+const x = 1
+const y = 2
 
-print(y)
+console.log(x+=y);
