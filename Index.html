@@ -53,12 +53,13 @@
 
   </body>
   <script>
- 
-    function additionSet() {
+
+  // these set of functions set the container header and the onclick event function
+  // to the desired operation by the end user 
+
       document.getElementById("operationHeader").innerHTML = "Addition";
       document.getElementById("resultButton").onclick = add;
 
-    }
     function subtractionSet() {
       document.getElementById("operationHeader").innerHTML = "Subtraction";
       document.getElementById("resultButton").onclick = subtract;
@@ -72,6 +73,11 @@
       document.getElementById("operationHeader").innerHTML = "Division";
         document.getElementById("resultButton").onclick = divide;
     }
+  // -------------------------------------------------------------------- //
+ 
+
+  //these set of functions perform the desired operation 
+  // and display the result on the result container
 
     function add() {
       var x = document.getElementsByName("x")[0].value;
@@ -107,7 +113,18 @@
       document.getElementById("result").innerHTML = result;
       if (isNaN(result)) {
         document.getElementById("result").innerHTML = 0;
-      }
+      } 
+
+      // this if statement checks if the result is a decimal number and then rounds the result 
+      // in the result container to 2 decimal places
+
+    if (result % 1 != 0) {
+            document.getElementById("result").innerHTML = result.toFixed(2);
+        }
     }
+    // -------------------------------------------------------------------- //
+      // code and code documentation written by julius castillejo :) //
+    // -------------------------------------------------------------------- //
+
   </script>
 </html>
