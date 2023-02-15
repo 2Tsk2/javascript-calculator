@@ -17,11 +17,11 @@ body {
 }
 
 .header h2 {
-    color: rgb(80, 116, 76);
+    color: rgb(82, 117, 78);
     border-radius: 5px;
     padding: 15px;
     text-align: center;
-    background-color: rgba(162, 246, 99, 0.931);
+    background-color: rgba(190, 238, 154, 0.931);
     box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 
 }
@@ -53,11 +53,11 @@ body {
 }
 
 .button-container button:hover {
-    background-color: rgba(236, 154, 154, 0.693);
+    background-color: rgba(147, 185, 162, 0.693);
 }
 
 .button-container button:active {
-    background-color: rgb(181, 92, 92);
+    background-color: rgb(140, 167, 123);
     transform: translateY(2px);
     box-shadow: 0px 3px rgba(0, 0, 0, 0.3);
 
@@ -65,7 +65,7 @@ body {
 
 .calculator-input-output-container {
     -webkit-flex: 10;
-    background-color: rgb(204, 232, 151);
+    background-color: rgb(199, 213, 173);
     margin-right: 10px;
     margin-bottom: -20px;
     border-radius: 5px;
@@ -98,10 +98,42 @@ body {
 }
 .calculator-input-output-container input:focus {
     outline: none;
-    background-color: rgb(115, 207, 129);
+    background-color: rgb(150, 207, 158);
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .calculator-input-output-container h1{
     text-align: center;
+}
+
+.calculator-input-output-container #result{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.calculator-input-output-container button{
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 0px 7px rgba(0, 0, 0, 0.5);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 10px;
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    background-color: rgb(210, 222, 189);
+    margin-top: 30px;
+}
+.calculator-input-output-container button:active{
+    background-color: rgba(108, 133, 93, 0.693);
+    transform: translateY(2px);
+    box-shadow: 0px 1px;
 }

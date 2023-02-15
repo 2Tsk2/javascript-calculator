@@ -1,43 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>index</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <h2>Javascript calculator</h2>
+      <h2>Javascript calculator</h2>
     </div>
     <div class="flex-container">
-        <div class="button-container">
-            <div><button>+</button></div>
-            <div><button>-</button></div>
-            <div><button>x</button></div>
-            <div><button>%</button></div>
+      <div class="button-container">
+        <div><button name="Addition">+</button></div>
+        <div><button name="subtraction">-</button></div>
+        <div><button name="multiplication">x</button></div>
+        <div><button name="division">%</button></div>
+      </div>
+      <div class="calculator-input-output-container">
+        <div>
+          <h1>Addition</h1>
         </div>
-        <div class="calculator-input-output-container">
-            <div>
-                <h1>Addition </h1>
-            </div>
-            <div class="form-container">
-                <input type="number" inputmode="numeric" placeholder="Please enter the first value" name="x">
-            </div>
-            <div class="form-container">
-                <input type="number" placeholder="Please enter the second value" name="y">
-            </div>
+        <div class="form-container">
+          <input
+            type="number"
+            inputmode="numeric"
+            placeholder="Please enter the first value"
+            name="x"
+          />
         </div>
+        <div class="form-container">
+          <input
+            type="number"
+            placeholder="Please enter the second value"
+            name="y"
+          />
+        </div>
+        <div class="form-container">
+          <button onclick="add()">=</button>
+          <div>
+            <h1 id="result">RESULT</h1>
+            <script></script>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-</body>
- <script>
-    let x = document.forms("x");
-    let y = document.input("y");
-    console.log (x)
+  </body>
+  <script>
 
- </script>
+    
+    function add() {
+      var x = document.getElementsByName("x")[0].value;
+      var y = document.getElementsByName("y")[0].value;
+      var result = parseInt(x) + parseInt(y);
+      document.getElementById("result").innerHTML = result;
+      if (isNaN(result)) {
+        document.getElementById("result").innerHTML = 0;
+      }
+    }
+    function subtract() {
+      var x = document.getElementsByName("x")[0].value;
+      var y = document.getElementsByName("y")[0].value;
+      var result = parseInt(x) - parseInt(y);
+      document.getElementById("result").innerHTML = result;
+      if (isNaN(result)) {
+        document.getElementById("result").innerHTML = 0;
+      }
+    }
+    function multiply() {
+      var x = document.getElementsByName("x")[0].value;
+      var y = document.getElementsByName("y")[0].value;
+      var result = parseInt(x) * parseInt(y);
+      document.getElementById("result").innerHTML = result;
+      if (isNaN(result)) {
+        document.getElementById("result").innerHTML = 0;
+      }
+    }
+    function divide() {
+      var x = document.getElementsByName("x")[0].value;
+      var y = document.getElementsByName("y")[0].value;
+      var result = parseInt(x) / parseInt(y);
+      document.getElementById("result").innerHTML = result;
+      if (isNaN(result)) {
+        document.getElementById("result").innerHTML = 0;
+      }
+    }
+  </script>
 </html>
