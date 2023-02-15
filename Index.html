@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&amp;display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -14,14 +15,15 @@
     </div>
     <div class="flex-container">
       <div class="button-container">
-        <div><button name="Addition">+</button></div>
-        <div><button name="subtraction">-</button></div>
-        <div><button name="multiplication">x</button></div>
-        <div><button name="division">%</button></div>
+        <div><button name="Addition" onclick="additionSet()">+</button></div>
+        <div><button name="subtraction" onclick="subtractionSet()">-</button></div>
+        <div><button name="multiplication" onclick="multiplicationSet()">x</button></div>
+        <div><button name="division" onclick="divisionSet()">%</button></div>
+        <div><p>To get started, click on a desired operation above and input the desired Integers on the input field</p></div>
       </div>
       <div class="calculator-input-output-container">
         <div>
-          <h1>Addition</h1>
+          <h1 id="operationHeader">Addition</h1>
         </div>
         <div class="form-container">
           <input
@@ -39,18 +41,38 @@
           />
         </div>
         <div class="form-container">
-          <button onclick="add()">=</button>
+          <button onclick="add()" id="resultButton">=</button>
           <div>
             <h1 id="result">RESULT</h1>
             <script></script>
           </div>
-        </div>
+          
       </div>
+      
     </div>
+
   </body>
   <script>
+ 
+    function additionSet() {
+      document.getElementById("operationHeader").innerHTML = "Addition";
+      document.getElementById("resultButton").onclick = add;
 
-    
+    }
+    function subtractionSet() {
+      document.getElementById("operationHeader").innerHTML = "Subtraction";
+      document.getElementById("resultButton").onclick = subtract;
+
+    }
+    function multiplicationSet() {
+      document.getElementById("operationHeader").innerHTML = "Multiplication";
+      document.getElementById("resultButton").onclick = multiply;
+    }
+    function divisionSet() {
+      document.getElementById("operationHeader").innerHTML = "Division";
+        document.getElementById("resultButton").onclick = divide;
+    }
+
     function add() {
       var x = document.getElementsByName("x")[0].value;
       var y = document.getElementsByName("y")[0].value;
